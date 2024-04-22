@@ -38,3 +38,9 @@ jobs:
 
     - name : Build DockerFile
       run : docker build -t test_accenture .
+
+    - name : Build DockerFile
+      run : |
+        echo ${{ secrets.DOCKER_TOKEN }} | docker login elenitasoka --password-stdin
+        docker build -t elenitasoka/test_accenture .
+        docker puch elenitasoka/test_accenture
