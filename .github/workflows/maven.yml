@@ -36,5 +36,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name :Build DockerFile
-      rub : docker build -t test_accenture .
+    - name : Build DockerFile
+      run : docker build -t test_accenture .
