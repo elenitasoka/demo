@@ -41,6 +41,6 @@ jobs:
 
     - name : Build DockerFile
       run : |
-        echo ${{ secrets.DOCKER_TOKEN }} | docker login elenitasoka --password-stdin
+        echo ${{ secrets.DOCKER_TOKEN }} | docker login -u elenitasoka --password-stdin
         docker build -t elenitasoka/test_accenture .
         docker puch elenitasoka/test_accenture
